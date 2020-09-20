@@ -112,7 +112,7 @@ class Group {
 		}
 		else
 		{
-			_logger.log("No eliminations this round.");
+			_logger.log("\nNo eliminations this round.");
 		}
 		
 		//Return the record for this round
