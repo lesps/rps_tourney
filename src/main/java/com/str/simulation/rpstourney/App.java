@@ -4,11 +4,10 @@
 package com.str.simulation.rpstourney;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
 
+	
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    	ILogger logger = new ConsoleLogger();
+        (new Game(logger)).runTournament();
     }
 }
