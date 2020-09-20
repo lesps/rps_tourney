@@ -3,9 +3,15 @@
  */
 package com.str.simulation.rpstourney;
 
+/**
+ * @author Spencer Lee
+ * The driver class for this project.
+ */
 public class App {
-
 	
+    /**
+     * @param args Arguments for execution.
+     */
     public static void main(String[] args) {
     	ILogger logger = new ConsoleLogger();
         (new Game(logger)).runTournament();
