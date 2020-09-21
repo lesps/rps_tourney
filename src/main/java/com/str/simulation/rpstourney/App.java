@@ -14,6 +14,16 @@ public class App {
      */
     public static void main(String[] args) {
     	ILogger logger = new ConsoleLogger();
-        (new Game(logger)).runTournament();
+    	
+    	Game game;
+    	if(args.length > 0)
+    	{
+    		game = new Game(logger, Integer.parseInt(args[0]));
+    	}
+    	else
+    	{
+    		game = new Game(logger);
+    	}
+        game.runTournament();
     }
 }

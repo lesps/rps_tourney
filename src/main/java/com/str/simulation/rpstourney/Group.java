@@ -21,10 +21,15 @@ class Group {
 	
 	Group(ILogger logger)
 	{
+		this(logger, _rndGenerator.nextInt(9) + 2);
+	}
+	
+	Group(ILogger logger, int numPlayers)
+	{
 		_logger = logger;
 		
 		//Generate random number of players from 2 to 10
-		_numPlayers = _rndGenerator.nextInt(9) + 2;
+		_numPlayers = numPlayers;
 		
 		//Initialize players list
 		_players = new LinkedList<Player>();

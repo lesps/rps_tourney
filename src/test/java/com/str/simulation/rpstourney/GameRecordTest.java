@@ -28,6 +28,7 @@ public class GameRecordTest {
     public void testTwoOfSameEntries()
     {
     	_record.addMove(Move.PAPER);
+    	_record.addMove(Move.PAPER);
     	
     	assertFalse(_record.hasWinner());
     }

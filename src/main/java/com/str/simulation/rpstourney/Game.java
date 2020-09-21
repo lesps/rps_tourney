@@ -28,6 +28,17 @@ public class Game {
 	}
 	
 	/**
+	 * @param logger The ILogger to use for output.
+	 * @param numPlayers The number of players, if specified.
+	 */
+	public Game(ILogger logger, int numPlayers)
+	{
+		_logger = logger;
+		_group = new Group(_logger, numPlayers);
+		_records = new ArrayList<GameRecord>();
+	}
+	
+	/**
 	 * Runs a tournament with the given game group.
 	 */
 	public void runTournament()
